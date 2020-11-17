@@ -9,14 +9,6 @@ style = ('Arial', 30, 'bold')
 x = 0
 y = 0
 keep_going = True
-if keep_going is False:
-    print(turtle.pos()[0])
-    x = turtle.pos()[0]
-    y = turtle.pos()[1]
-    turtle.write('u', font = style)
-    turtle.penup()
-    turtle.setpos(x + 23, y)
-    turtle.pendown()
 #Initialize screen: move pen to left side
 def init():
     turtle.penup()
