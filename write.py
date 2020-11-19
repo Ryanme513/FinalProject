@@ -12,7 +12,7 @@ keep_going = True
 #Initialize screen: move pen to left side
 def init():
     turtle.penup()
-    turtle.setpos(-470, 400)
+    turtle.setpos(-470, 350)
     turtle.pendown()
     turtle.width(2)
     x = turtle.pos()[0]
@@ -722,7 +722,7 @@ turtle.onkeypress(question, "?")
 turtle.onkeypress(next_line, "Return")
 turtle.listen()
 
-
+turtle.mainloop()
 
 
 
