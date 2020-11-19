@@ -12,7 +12,3 @@ def wordcount(essay):
 
 print(wordcount("Enter the equation below and hit submit. If you need to fix your work, go back to the prior screen"))
 
-
-#filler text
-
-#ramiros change
