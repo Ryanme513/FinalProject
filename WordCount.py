@@ -1,7 +1,11 @@
 # essay = "Enter the equation below and hit submit. If you need to fix your work, go back to the prior screen"
 def lettercount(essay):
-    letters = essay.count(" ")
-    y = len(essay) - letters
+    space = essay.count(" ")
+    period = essay.count(".")
+    comma = essay.count(",")
+    questionmark = essay.count("?")
+    exclamationmark = essay.count("!")
+    y = len(essay) - space - period - comma - questionmark - exclamationmark
     return ("You have " +  str(y) + " letters in your text.") 
     
 print(lettercount("Enter the equation below and hit submit. If you need to fix your work, go back to the prior screen"))
