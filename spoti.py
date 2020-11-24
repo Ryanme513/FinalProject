@@ -7,7 +7,7 @@ from spotipy.oauth2 import SpotifyClientCredentials
 
 # Follow the instructions at https://developer.spotify.com/documentation/web-api/quick-start
 # to register an application and get a client ID and client secret
-credentials = SpotifyClientCredentials(client_id='', client_secret='')
+credentials = SpotifyClientCredentials(client_id='d704a26dc6874b4983414f5baf910c4d', client_secret='41e7c1ebe3f24235b8ba0889ff267af8')
 spotify = spotipy.Spotify(client_credentials_manager=credentials)
 
 mood_regex_to_genres = {
