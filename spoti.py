@@ -44,6 +44,8 @@ def play_song(genre):
   print(f'Playing {track["name"]} by {track["artists"][0]["name"]}...')
   webbrowser.open(track['external_urls']['spotify'])
 
+# For Ramiro: get('C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s')
+
 def main():
   response = input('How are you feeling today?\n')
   while True:
