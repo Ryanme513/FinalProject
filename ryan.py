@@ -89,13 +89,13 @@ def top_artist():
   artists_names = list(artists.keys())
   artist_name_index = choose_index(artists_names)
   chosen_artist = artists_names[artist_name_index]
-  print(artists[chosen_artist])
-  webbrowser.open(track['external_urls']['spotify'])
+  artist_id = artists[chosen_artist]
+  # webbrowser.open(track['external_urls']['spotify'])
 
-  response = input('Which artist would you like to see?')
-  x = spotify.artist_top_tracks(artist_id="https://open.spotify.com/artist/3TVXtAsR1Inumwj472S9r4")
+  # response = input('Which artist would you like to see?')
+  x = spotify.artist_top_tracks(artist_id=artist_id)
   play_song(x['tracks'])
   
 
 
-# top_artist()
+top_artist()
