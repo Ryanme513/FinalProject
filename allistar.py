@@ -69,9 +69,36 @@ def play_song(tracks):
 # if __name__ == '__main__':
 #   main()
 
+artists = {
+    'Marshmellow':'https://open.spotify.com/artist/64KEffDW9EtZ1y2vBYgq8T',
+    'Khalid':'https://open.spotify.com/artist/6LuN9FCkKOj5PcnpouEgny',
+    'Ariana Grande':'https://open.spotify.com/artist/66CXWjxzNUsdJxJ2JdwvnR',
+    'Cardi B':'https://open.spotify.com/artist/4kYSro6naA4h99UJvo89HB',
+    'Ed Sheeran':'https://open.spotify.com/artist/6eUKZXaKkcviH0Ku9w2n3V',
+    'Justin Bieber':'https://open.spotify.com/artist/1uNFoZAHBGtllmzznpCI3s',
+    'Dua Lipa':'https://open.spotify.com/artist/6M2wZ9GZgrQXHCFfjv46we',
+    'J Balvin':'https://open.spotify.com/artist/1vyhD5VmyZ7KMfW5gqLgo5',
+    'Drake':'https://open.spotify.com/artist/3TVXtAsR1Inumwj472S9r4',
+    'The Weeknd':'https://open.spotify.com/artist/1Xyo4u8uXC1ZmMpatF05PJ', 
+    'Lena Raine': 'https://open.spotify.com/artist/3Ww8GMbCDMAGwJJ2hd7z7z',
+    'Andrew Prahlow': 'https://open.spotify.com/artist/0z4uBJEzO1dJy57Qk5UYt8'
+}
+
+
+
+# print(choose_index(artists))
 def top_artist():
-  response = input('Which artist would you like to see?')
-  x = spotify.artist_top_tracks(spotify.artists(artists=["https://open.spotify.com/artist/3TVXtAsR1Inumwj472S9r4", "https://open.spotify.com/artist/13kMpt8IdcHcdxPLcJrgU2"]))
+  artists_names = list(artists.keys())
+  artist_name_index = choose_index(artists_names)
+  chosen_artist = artists_names[artist_name_index]
+  artist_id = artists[chosen_artist]
+  # webbrowser.open(track['external_urls']['spotify'])
+
+  # response = input('Which artist would you like to see?')
+  x = spotify.artist_top_tracks(artist_id=artist_id)
   play_song(x['tracks'])
+  
+
 
 top_artist()
+
