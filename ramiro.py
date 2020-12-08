@@ -15,7 +15,7 @@ def choose_index(options):
     print(f'{i}. {option}')
   while True:
     response = input(
-      f'Please enter a number from 1 to {len(options)}, or leave blank to let me choose! ')
+      f'Please enter a number from 1 to {len(options)} to select a artist or song, or leave blank to let me choose! ')
     if not response:
       return random.randrange(len(options))
     try: index = int(response)
