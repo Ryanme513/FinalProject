@@ -79,7 +79,7 @@ artists = {
     'Dua Lipa':'https://open.spotify.com/artist/6M2wZ9GZgrQXHCFfjv46we',
     'J Balvin':'https://open.spotify.com/artist/1vyhD5VmyZ7KMfW5gqLgo5',
     'Drake':'https://open.spotify.com/artist/3TVXtAsR1Inumwj472S9r4',
-    'The Weeknd':'https://open.spotify.com/artist/1Xyo4u8uXC1ZmMpatF05PJ'
+    'The Weeknd':'https://open.spotify.com/artist/1Xyo4u8uXC1ZmMpatF05PJ',
 }
 
 
