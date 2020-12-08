@@ -5,19 +5,9 @@ import webbrowser
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 
-# Follow the instructions at https://developer.spotify.com/documentation/web-api/quick-start
-# to register an application and get a client ID and client secret
 credentials = SpotifyClientCredentials(client_id='d704a26dc6874b4983414f5baf910c4d', client_secret='41e7c1ebe3f24235b8ba0889ff267af8')
 spotify = spotipy.Spotify(client_credentials_manager=credentials)
 
-# mood_regex_to_genres = {
-#   r'happy|excited|great|fantastic|good|:\)|:D': ['happy', 'party'],
-#   r'sad|down|depressed|bad|:\(': ['acoustic', 'piano', 'sad'],
-#   r'stressed': ['classical', 'jazz'],
-#   r'angry|frustrated|pissed|>:\(': ['heavy-metal', 'hip-hop', 'metal'],
-#   r'(in )?lov(e|ing|ed)?|<3': ['romantic'],
-#   r'sleepy|zzz|tired': ['ambient', 'sleep'],
-# }
 
 def choose_index(options):
   '''Displays a numbered list of `options` to the user and prompts them to select one.'''
@@ -33,41 +23,13 @@ def choose_index(options):
     if index > 0 and index <= len(options):
       return index - 1
 
-# def play_song(genre):
-#   print(f'Searching for a few "{genre}" songs...')
-#   recommendations = spotify.recommendations(seed_genres=[genre], limit=10)
-#   # Filter out tracks without Spotify URLs
-#   tracks = [t for t in recommendations['tracks'] if 'spotify' in t['external_urls']]
-#   track_titles = [t['artists'][0]['name'] + ' - ' + t['name'] for t in tracks]
-#   print(f'I found a few "{genre}" songs for you:')
-#   track = tracks[choose_index(track_titles)]
-#   print(f'Playing {track["name"]} by {track["artists"][0]["name"]}...')
-#   webbrowser.open(track['external_urls']['spotify'])
-
 def play_song(tracks):
-  # print(f'Searching for a few songs from "{artist_id}"...')
-  # recommendations = spotify.recommendations(seed_artists=[artist_id], limit=10)
-  # # Filter out tracks without Spotify URLs
-  # tracks = [t for t in recommendations['tracks'] if 'spotify' in t['external_urls']]
   track_titles = [t['artists'][0]['name'] + ' - ' + t['name'] for t in tracks]
   print(f'I found a few songs from ARTIST for you:')
   track = tracks[choose_index(track_titles)]
-  print(f'Playing {track["name"]} by {track["artists"][0]["name"]}...')
+  print(f'Listening to {track["name"]} by {track["artists"][0]["name"]}. Enjoy your new song and share with your friends :)')
   webbrowser.get('C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s').open(track['external_urls']['spotify'])
 
-# # For Ramiro: .get('C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s')
-
-# def main():
-#   response = input('How are you feeling today?\n')
-#   while True:
-#     for mood_regex, genres in mood_regex_to_genres.items():
-#       if re.compile(mood_regex, re.IGNORECASE).search(response):
-#         print('Which of these genres would you like to listen to?')
-#         return play_song(genres[choose_index(genres)])
-#     response = input('Hmm, I could not quite understand that. Can you please reword that?\n')
-
-# if __name__ == '__main__':
-#   main()
 
 artists = {
     'Marshmellow':'https://open.spotify.com/artist/64KEffDW9EtZ1y2vBYgq8T',
@@ -96,6 +58,4 @@ def top_artist():
   x = spotify.artist_top_tracks(artist_id=artist_id)
   play_song(x['tracks'])
   
-#hi
-
 top_artist()
