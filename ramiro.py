@@ -41,7 +41,18 @@ artists = {
     'Dua Lipa':'https://open.spotify.com/artist/6M2wZ9GZgrQXHCFfjv46we',
     'J Balvin':'https://open.spotify.com/artist/1vyhD5VmyZ7KMfW5gqLgo5',
     'Drake':'https://open.spotify.com/artist/3TVXtAsR1Inumwj472S9r4',
-    'The Weeknd':'https://open.spotify.com/artist/1Xyo4u8uXC1ZmMpatF05PJ'
+    'The Weeknd':'https://open.spotify.com/artist/1Xyo4u8uXC1ZmMpatF05PJ',
+    'Martin Garrix':'https://open.spotify.com/artist/60d24wfXkVzDSfLS6hyCjZ',
+    'DaBaby':'https://open.spotify.com/artist/4r63FhuTkUYltbVAg5TQnk',
+    'Taylor Swift':'https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02',
+    'Queen':'https://open.spotify.com/artist/1dfeR4HaWDbWqFHLkxsg1d',
+    'The Chainsmokers':'https://open.spotify.com/artist/69GGBxA162lTqCwzJG5jLp',
+    'Bruno Mars':'https://open.spotify.com/artist/0du5cEVh5yTK9QJze8zA0C',
+    'Billie Eilish':'https://open.spotify.com/artist/6qqNVTkY8uBg9cP3Jd7DAH',
+    'Post Malone':'https://open.spotify.com/artist/246dkjvS1zLTtiykXe5h60',
+    'Travis Scott':'https://open.spotify.com/artist/0Y5tJX1MQlPlqiwlOH1tJY',
+    'BTS':'https://open.spotify.com/artist/3Nrfpe0tUJi4K4DXYWgMUX'
+
 }
 
 
