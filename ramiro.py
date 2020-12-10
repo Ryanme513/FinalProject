@@ -28,7 +28,7 @@ def play_song(tracks):
   print(f'I found a few songs from ARTIST for you:')
   track = tracks[choose_index(track_titles)]
   print(f'Listening to {track["name"]} by {track["artists"][0]["name"]}. Enjoy your new song and share with your friends :)')
-  webbrowser.get('C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s').open(track['external_urls']['spotify'])
+  #webbrowser.get('C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s').open(track['external_urls']['spotify'])
 
 
 artists = {
@@ -57,5 +57,6 @@ def top_artist():
   # response = input('Which artist would you like to see?')
   x = spotify.artist_top_tracks(artist_id=artist_id)
   play_song(x['tracks'])
-  
+
+ 
 top_artist()
